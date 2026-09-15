@@ -1767,7 +1767,7 @@ body {
     <main>
 
         <section class="hero">
-<div class="character-art doom-art visible">
+<div class="character-art doom-art" data-character>
     <img src="assets/doom.jpg" alt="">
 </div>
 
@@ -2367,24 +2367,23 @@ body {
    CHARACTER SCROLL EFFECT
 ========================================================= */
 
-const characterElements =
-    document.querySelectorAll("[data-character]");
+const characterElements = document.querySelectorAll("[data-character]");
 
-const characterObserver =
-    new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.08,
-            rootMargin: "0px 0px -5% 0px"
-        }
-    );
+const characterObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
+            }
+        });
+    },
+    {
+        threshold: 0.08,
+        rootMargin: "0px 0px -5% 0px"
+    }
+);
 
 characterElements.forEach((element) => {
     characterObserver.observe(element);
