@@ -1558,10 +1558,11 @@
         opacity: 0.15 !important;
     }
 }
+
 /* =========================================================
    FINAL MOBILE CHARACTER FIX
-   Keeps characters INSIDE the mobile viewport
-   and prevents horizontal page overflow
+   Larger characters + corrected Doctor Strange position
+   No horizontal page overflow
 ========================================================= */
 
 html,
@@ -1575,123 +1576,126 @@ body {
     .character-art {
         z-index: 2 !important;
         pointer-events: none !important;
+        transform: translateX(0) scale(1) !important;
     }
 
     /* DOCTOR DOOM — HERO RIGHT */
     .doom-art {
-        width: 150px !important;
-        height: 255px !important;
+        width: 220px !important;
+        height: 370px !important;
         right: 5px !important;
         left: auto !important;
-        top: 15px !important;
-        transform: translateX(0) scale(1) !important;
+        top: 10px !important;
+        opacity: 0.30 !important;
+    }
+
+    /* CAPTAIN AMERICA — PROBLEM SECTION LEFT */
+    .problem-character {
+        width: 165px !important;
+        height: 335px !important;
+        left: 8px !important;
+        right: auto !important;
+        top: 115px !important;
         opacity: 0.25 !important;
     }
 
-    /* CAPTAIN AMERICA — LEFT */
-    .problem-character {
-        width: 95px !important;
-        height: 205px !important;
-        left: 5px !important;
-        right: auto !important;
-        top: 135px !important;
-        transform: translateX(0) scale(1) !important;
-        opacity: 0.20 !important;
-    }
-
-    /* BLACK PANTHER — RIGHT */
+    /* BLACK PANTHER — SOLUTION SECTION RIGHT */
     .solution-character {
-        width: 100px !important;
-        height: 210px !important;
-        right: 5px !important;
+        width: 170px !important;
+        height: 340px !important;
+        right: 8px !important;
         left: auto !important;
-        top: 125px !important;
-        transform: translateX(0) scale(1) !important;
-        opacity: 0.20 !important;
+        top: 105px !important;
+        opacity: 0.25 !important;
     }
 
-    /* DOCTOR STRANGE — LEFT */
+    /* DOCTOR STRANGE — HOW IT WORKS LEFT
+       Positioned lower so he sits alongside the
+       actual How It Works content rather than the heading. */
     .steps-character {
-        width: 95px !important;
-        height: 205px !important;
-        left: 5px !important;
+        width: 165px !important;
+        height: 335px !important;
+        left: 8px !important;
         right: auto !important;
-        top: 125px !important;
-        transform: translateX(0) scale(1) !important;
-        opacity: 0.20 !important;
+        top: 175px !important;
+        opacity: 0.25 !important;
     }
 
-    /* THOR — RIGHT */
+    /* THOR — SUBJECTS RIGHT */
     .thor-character {
-        width: 100px !important;
-        height: 210px !important;
-        right: 5px !important;
+        width: 175px !important;
+        height: 350px !important;
+        right: 8px !important;
         left: auto !important;
-        top: 110px !important;
-        transform: translateX(0) scale(1) !important;
-        opacity: 0.20 !important;
+        top: 105px !important;
+        opacity: 0.25 !important;
     }
 
-    /* IRON MAN — LEFT */
+    /* IRON MAN — SUBJECTS LEFT */
     .iron-character {
-        width: 80px !important;
-        height: 170px !important;
-        left: 5px !important;
+        width: 145px !important;
+        height: 295px !important;
+        left: 8px !important;
         right: auto !important;
         bottom: 0 !important;
-        transform: translateX(0) scale(1) !important;
-        opacity: 0.17 !important;
+        opacity: 0.22 !important;
     }
 }
 
 @media (max-width: 600px) {
 
+    /* DOCTOR DOOM — HERO RIGHT */
     .doom-art {
-        width: 125px !important;
-        height: 215px !important;
-        right: 3px !important;
-        top: 15px !important;
-        opacity: 0.22 !important;
+        width: 180px !important;
+        height: 305px !important;
+        right: 5px !important;
+        top: 10px !important;
+        opacity: 0.28 !important;
     }
 
+    /* CAPTAIN AMERICA — PROBLEM SECTION LEFT */
     .problem-character {
-        width: 75px !important;
-        height: 165px !important;
-        left: 3px !important;
-        top: 140px !important;
-        opacity: 0.18 !important;
+        width: 135px !important;
+        height: 275px !important;
+        left: 8px !important;
+        top: 125px !important;
+        opacity: 0.24 !important;
     }
 
+    /* BLACK PANTHER — SOLUTION SECTION RIGHT */
     .solution-character {
-        width: 80px !important;
-        height: 170px !important;
-        right: 3px !important;
-        top: 130px !important;
-        opacity: 0.18 !important;
-    }
-
-    .steps-character {
-        width: 75px !important;
-        height: 165px !important;
-        left: 3px !important;
-        top: 135px !important;
-        opacity: 0.18 !important;
-    }
-
-    .thor-character {
-        width: 80px !important;
-        height: 170px !important;
-        right: 3px !important;
+        width: 140px !important;
+        height: 285px !important;
+        right: 8px !important;
         top: 115px !important;
-        opacity: 0.18 !important;
+        opacity: 0.24 !important;
     }
 
+    /* DOCTOR STRANGE — HOW IT WORKS LEFT */
+    .steps-character {
+        width: 135px !important;
+        height: 275px !important;
+        left: 8px !important;
+        top: 175px !important;
+        opacity: 0.24 !important;
+    }
+
+    /* THOR — SUBJECTS RIGHT */
+    .thor-character {
+        width: 145px !important;
+        height: 290px !important;
+        right: 8px !important;
+        top: 105px !important;
+        opacity: 0.24 !important;
+    }
+
+    /* IRON MAN — SUBJECTS LEFT */
     .iron-character {
-        width: 65px !important;
-        height: 140px !important;
-        left: 3px !important;
+        width: 120px !important;
+        height: 245px !important;
+        left: 8px !important;
         bottom: 0 !important;
-        opacity: 0.15 !important;
+        opacity: 0.21 !important;
     }
 }
 </style>
