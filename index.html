@@ -1558,6 +1558,142 @@
         opacity: 0.15 !important;
     }
 }
+/* =========================================================
+   FINAL MOBILE CHARACTER FIX
+   Keeps characters INSIDE the mobile viewport
+   and prevents horizontal page overflow
+========================================================= */
+
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    .character-art {
+        z-index: 2 !important;
+        pointer-events: none !important;
+    }
+
+    /* DOCTOR DOOM — HERO RIGHT */
+    .doom-art {
+        width: 150px !important;
+        height: 255px !important;
+        right: 5px !important;
+        left: auto !important;
+        top: 15px !important;
+        transform: translateX(0) scale(1) !important;
+        opacity: 0.25 !important;
+    }
+
+    /* CAPTAIN AMERICA — LEFT */
+    .problem-character {
+        width: 95px !important;
+        height: 205px !important;
+        left: 5px !important;
+        right: auto !important;
+        top: 135px !important;
+        transform: translateX(0) scale(1) !important;
+        opacity: 0.20 !important;
+    }
+
+    /* BLACK PANTHER — RIGHT */
+    .solution-character {
+        width: 100px !important;
+        height: 210px !important;
+        right: 5px !important;
+        left: auto !important;
+        top: 125px !important;
+        transform: translateX(0) scale(1) !important;
+        opacity: 0.20 !important;
+    }
+
+    /* DOCTOR STRANGE — LEFT */
+    .steps-character {
+        width: 95px !important;
+        height: 205px !important;
+        left: 5px !important;
+        right: auto !important;
+        top: 125px !important;
+        transform: translateX(0) scale(1) !important;
+        opacity: 0.20 !important;
+    }
+
+    /* THOR — RIGHT */
+    .thor-character {
+        width: 100px !important;
+        height: 210px !important;
+        right: 5px !important;
+        left: auto !important;
+        top: 110px !important;
+        transform: translateX(0) scale(1) !important;
+        opacity: 0.20 !important;
+    }
+
+    /* IRON MAN — LEFT */
+    .iron-character {
+        width: 80px !important;
+        height: 170px !important;
+        left: 5px !important;
+        right: auto !important;
+        bottom: 0 !important;
+        transform: translateX(0) scale(1) !important;
+        opacity: 0.17 !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .doom-art {
+        width: 125px !important;
+        height: 215px !important;
+        right: 3px !important;
+        top: 15px !important;
+        opacity: 0.22 !important;
+    }
+
+    .problem-character {
+        width: 75px !important;
+        height: 165px !important;
+        left: 3px !important;
+        top: 140px !important;
+        opacity: 0.18 !important;
+    }
+
+    .solution-character {
+        width: 80px !important;
+        height: 170px !important;
+        right: 3px !important;
+        top: 130px !important;
+        opacity: 0.18 !important;
+    }
+
+    .steps-character {
+        width: 75px !important;
+        height: 165px !important;
+        left: 3px !important;
+        top: 135px !important;
+        opacity: 0.18 !important;
+    }
+
+    .thor-character {
+        width: 80px !important;
+        height: 170px !important;
+        right: 3px !important;
+        top: 115px !important;
+        opacity: 0.18 !important;
+    }
+
+    .iron-character {
+        width: 65px !important;
+        height: 140px !important;
+        left: 3px !important;
+        bottom: 0 !important;
+        opacity: 0.15 !important;
+    }
+}
 </style>
 </head>
 
