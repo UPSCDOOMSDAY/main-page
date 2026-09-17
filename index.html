@@ -1523,6 +1523,68 @@ body {
         bottom: 0 !important;
     }
 }
+
+/* =========================================
+   LIVELY LIVE STATUS — VISUAL ONLY
+========================================= */
+
+.subject-status.live {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    animation: liveStatusPulse 2s ease-in-out infinite;
+    text-shadow: 0 0 0 rgba(74, 222, 128, 0);
+}
+
+.subject-status.live::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: 50%;
+    height: 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    transform: translateY(-50%) scale(0.75);
+    opacity: 0;
+    pointer-events: none;
+    animation: liveRing 2s ease-out infinite;
+}
+
+.subject-status.live:hover {
+    text-shadow: 0 0 12px rgba(74, 222, 128, 0.65);
+}
+
+@keyframes liveStatusPulse {
+    0%, 100% {
+        opacity: 0.82;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+}
+
+@keyframes liveRing {
+    0% {
+        opacity: 0.65;
+        transform: translateY(-50%) scale(0.72);
+    }
+    70%, 100% {
+        opacity: 0;
+        transform: translateY(-50%) scale(1.18);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .subject-status.live,
+    .subject-status.live::after {
+        animation: none;
+    }
+}
+
 </style>
 </head>
 
