@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://upscdoomsday.github.io/main-page/sitemap.xml
