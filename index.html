@@ -728,6 +728,48 @@
             font-weight: 700;
         }
 
+
+
+        /* =========================================
+           SEO OVERVIEW / SEARCH CONTEXT
+           Content-first section; no existing layout changes
+        ========================================= */
+
+        .seo-overview {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+
+        .seo-overview-box {
+            margin-top: 30px;
+            padding: 34px 38px;
+            border-radius: 22px;
+            background: rgba(18, 15, 15, 0.72);
+            border: 1px solid rgba(201, 162, 75, 0.16);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .seo-overview-box p {
+            max-width: 900px;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .seo-overview-box p + p {
+            margin-top: 14px;
+        }
+
+        .seo-overview-box strong {
+            color: #e8c874;
+        }
+
+        @media (max-width: 700px) {
+            .seo-overview-box {
+                padding: 26px 22px;
+            }
+        }
+
         /* =========================================
            DID YOU KNOW
         ========================================= */
@@ -2054,6 +2096,39 @@ body {
         </section>
 
 
+
+
+        <!-- =====================================
+             UPSC PYQs + ANSWER-WRITING OVERVIEW
+        ====================================== -->
+
+        <section class="seo-overview">
+
+            <div class="section-label">
+                UPSC MAINS PREPARATION
+            </div>
+
+            <h2 class="section-title">
+                UPSC Mains PYQs, organised for answer-writing practice.
+            </h2>
+
+            <p class="section-description">
+                UPSC Doomsday is built around a simple preparation workflow: find the right Previous Year Questions, organise them by subject, paper, topic and year, and turn them into a Question-Cum-Answer Booklet (QCAB) for focused answer-writing practice.
+            </p>
+
+            <div class="seo-overview-box">
+                <p>
+                    Use the platform to practise <strong>UPSC Mains PYQs</strong> across General Studies and Anthropology, with questions presented in a way that helps you move from PYQ-based preparation to actual written practice.
+                </p>
+
+                <p>
+                    The main platform currently provides <strong>UPSC Anthropology PYQs</strong>, <strong>UPSC GS 1, GS 2, GS 3 and GS 4 PYQs</strong>, and a customizable QCAB tool for creating your own answer-writing sets.
+                </p>
+            </div>
+
+        </section>
+
+
         <!-- =====================================
              SUBJECTS
         ====================================== -->
@@ -2080,7 +2155,7 @@ body {
             </h2>
 
             <p class="section-description">
-                Practice UPSC Mains Previous Year Questions and generate QCABs for Anthropology, General Studies and customizable answer-writing practice.
+                Explore UPSC Mains Previous Year Questions for Anthropology and General Studies, or create customizable QCABs for answer-writing practice.
             </p>
 
 
